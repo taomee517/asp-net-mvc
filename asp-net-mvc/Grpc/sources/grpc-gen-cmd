@@ -1,0 +1,2 @@
+﻿C:\Users\htjc\.nuget\packages\grpc.tools\2.29.0\tools\windows_x64\protoc -I . --csharp_out . --grpc_out . --plugin=protoc-gen-grpc=C:\Users\htjc\.nuget\packages\grpc.tools\2.29.0\tools\windows_x64\grpc_csharp_plugin.ex
+e ControlApi.proto

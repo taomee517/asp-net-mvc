@@ -21,7 +21,7 @@ namespace asp_net_mvc
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-                        .UseUrls("https://localhost:8111")
+                        .UseUrls("http://localhost:8111")
                         .UseStartup<Startup>();
                 });
     }

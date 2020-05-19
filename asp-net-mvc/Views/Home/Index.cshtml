@@ -7,6 +7,8 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     <h2 id="ajaxTest">Hello,Index Page!</h2>
     <button onclick="query()">click me</button>
+    
+    <button onclick="setting()">send command</button>
 </div>
 
 @section Scripts
@@ -14,14 +16,28 @@
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         function query() {
-          $.ajax({
+            $.ajax({
                type: "GET",
-               url: "/rest/index",
-               dataType: "json",
+               // url: "/api/action",
+               url: "/api/string",
+               dataType: "text",
                contentType: "application/json;charset=UTF-8",
                // data: JSON.stringify(params),
                success: function(data) {
-                    alert(data);
+                    $("#ajaxTest").html(data);
+               }
+          });
+        }
+        
+        function setting() {
+            var params = {"Mac":"201912176604"};
+            $.ajax({
+               type: "POST",
+               url: "/api/setting",
+               dataType: "text",
+               contentType: "application/json;charset=UTF-8",
+               data: JSON.stringify(params),
+               success: function(data) {
                     $("#ajaxTest").html(data);
                }
           });

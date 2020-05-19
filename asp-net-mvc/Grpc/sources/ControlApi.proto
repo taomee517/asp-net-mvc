@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package asp_net_mvc.Grpc;
+
+service CtrlService {
+    // 获取设置命令的结果
+    rpc SendSettingCmd (SettingRequest) returns (SettingResponse) {}
+}
+
+// 获取设置命令的参数
+message SettingRequest {
+    // 控制命令实体
+    CmdEntity entity = 1;
+}
+
+// 获取单个账号数据返回值
+message SettingResponse {
+    // 控制结果
+    bool result = 1;
+}
+
+// 控制命令实体
+message CmdEntity{
+    // 设备号
+    string deviceMac = 1;
+    // 业务类型
+    int32 businessCode = 2;
+    // 功能类型
+    int32 functionCode = 3;
+    // 数据类型
+    int32 dataTypeCode = 4;
+    // 参数值
+    string paramsJson = 5;
+}
