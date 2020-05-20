@@ -4,8 +4,9 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using Grpc.Core;
+using GrpcLib.Grpc;
 
-namespace AspNetMvc.Grpc.utils
+namespace GrpcLib.utils
 {
     public class GrpcClientUtil
     {

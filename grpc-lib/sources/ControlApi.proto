@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asp_net_mvc.Grpc;
+package GrpcLib.grpc;
 
 service CtrlService {
     // 获取设置命令的结果

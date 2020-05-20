@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace AspNetMvc.Grpc {
+namespace GrpcLib.Grpc {
 
   /// <summary>Holder for reflection information generated from ControlApi.proto</summary>
   public static partial class ControlApiReflection {
@@ -24,21 +24,20 @@ namespace AspNetMvc.Grpc {
     static ControlApiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBDb250cm9sQXBpLnByb3RvEhBhc3BfbmV0X212Yy5HcnBjIj0KDlNldHRp",
-            "bmdSZXF1ZXN0EisKBmVudGl0eRgBIAEoCzIbLmFzcF9uZXRfbXZjLkdycGMu",
-            "Q21kRW50aXR5IiEKD1NldHRpbmdSZXNwb25zZRIOCgZyZXN1bHQYASABKAgi",
-            "dAoJQ21kRW50aXR5EhEKCWRldmljZU1hYxgBIAEoCRIUCgxidXNpbmVzc0Nv",
-            "ZGUYAiABKAUSFAoMZnVuY3Rpb25Db2RlGAMgASgFEhQKDGRhdGFUeXBlQ29k",
-            "ZRgEIAEoBRISCgpwYXJhbXNKc29uGAUgASgJMmYKC0N0cmxTZXJ2aWNlElcK",
-            "DlNlbmRTZXR0aW5nQ21kEiAuYXNwX25ldF9tdmMuR3JwYy5TZXR0aW5nUmVx",
-            "dWVzdBohLmFzcF9uZXRfbXZjLkdycGMuU2V0dGluZ1Jlc3BvbnNlIgBiBnBy",
-            "b3RvMw=="));
+            "ChBDb250cm9sQXBpLnByb3RvEgxHcnBjTGliLmdycGMiOQoOU2V0dGluZ1Jl",
+            "cXVlc3QSJwoGZW50aXR5GAEgASgLMhcuR3JwY0xpYi5ncnBjLkNtZEVudGl0",
+            "eSIhCg9TZXR0aW5nUmVzcG9uc2USDgoGcmVzdWx0GAEgASgIInQKCUNtZEVu",
+            "dGl0eRIRCglkZXZpY2VNYWMYASABKAkSFAoMYnVzaW5lc3NDb2RlGAIgASgF",
+            "EhQKDGZ1bmN0aW9uQ29kZRgDIAEoBRIUCgxkYXRhVHlwZUNvZGUYBCABKAUS",
+            "EgoKcGFyYW1zSnNvbhgFIAEoCTJeCgtDdHJsU2VydmljZRJPCg5TZW5kU2V0",
+            "dGluZ0NtZBIcLkdycGNMaWIuZ3JwYy5TZXR0aW5nUmVxdWVzdBodLkdycGNM",
+            "aWIuZ3JwYy5TZXR0aW5nUmVzcG9uc2UiAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::AspNetMvc.Grpc.SettingRequest), global::AspNetMvc.Grpc.SettingRequest.Parser, new[]{ "Entity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AspNetMvc.Grpc.SettingResponse), global::AspNetMvc.Grpc.SettingResponse.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AspNetMvc.Grpc.CmdEntity), global::AspNetMvc.Grpc.CmdEntity.Parser, new[]{ "DeviceMac", "BusinessCode", "FunctionCode", "DataTypeCode", "ParamsJson" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLib.Grpc.SettingRequest), global::GrpcLib.Grpc.SettingRequest.Parser, new[]{ "Entity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLib.Grpc.SettingResponse), global::GrpcLib.Grpc.SettingResponse.Parser, new[]{ "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLib.Grpc.CmdEntity), global::GrpcLib.Grpc.CmdEntity.Parser, new[]{ "DeviceMac", "BusinessCode", "FunctionCode", "DataTypeCode", "ParamsJson" }, null, null, null, null)
           }));
     }
     #endregion
@@ -56,7 +55,7 @@ namespace AspNetMvc.Grpc {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AspNetMvc.Grpc.ControlApiReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcLib.Grpc.ControlApiReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -84,12 +83,12 @@ namespace AspNetMvc.Grpc {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::AspNetMvc.Grpc.CmdEntity entity_;
+    private global::GrpcLib.Grpc.CmdEntity entity_;
     /// <summary>
     /// 控制命令实体
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AspNetMvc.Grpc.CmdEntity Entity {
+    public global::GrpcLib.Grpc.CmdEntity Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -158,7 +157,7 @@ namespace AspNetMvc.Grpc {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          Entity = new global::AspNetMvc.Grpc.CmdEntity();
+          Entity = new global::GrpcLib.Grpc.CmdEntity();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -175,7 +174,7 @@ namespace AspNetMvc.Grpc {
             break;
           case 10: {
             if (entity_ == null) {
-              Entity = new global::AspNetMvc.Grpc.CmdEntity();
+              Entity = new global::GrpcLib.Grpc.CmdEntity();
             }
             input.ReadMessage(Entity);
             break;
@@ -197,7 +196,7 @@ namespace AspNetMvc.Grpc {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AspNetMvc.Grpc.ControlApiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcLib.Grpc.ControlApiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -332,7 +331,7 @@ namespace AspNetMvc.Grpc {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::AspNetMvc.Grpc.ControlApiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcLib.Grpc.ControlApiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

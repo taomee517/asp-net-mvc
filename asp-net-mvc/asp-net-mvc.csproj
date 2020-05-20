@@ -6,11 +6,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Grpc" Version="2.29.0" />
-      <PackageReference Include="Grpc.Core" Version="2.29.0" />
-      <PackageReference Include="Grpc.Reflection" Version="2.29.0" />
-      <PackageReference Include="Grpc.Tools" Version="2.29.0" />
       <PackageReference Include="protobuf-net" Version="3.0.0-alpha.143" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Grpc" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\grpc-lib\grpc-lib.csproj" />
     </ItemGroup>
 
 </Project>

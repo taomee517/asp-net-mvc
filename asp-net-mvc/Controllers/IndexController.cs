@@ -2,9 +2,9 @@
 // 创建时间：2020/05/15 18:13
 
 using System;
-using AspNetMvc.Grpc;
-using AspNetMvc.Grpc.beans;
-using AspNetMvc.Grpc.utils;
+using GrpcLib.beans;
+using GrpcLib.Grpc;
+using GrpcLib.utils;
 using Microsoft.AspNetCore.Mvc;
 
 namespace asp_net_mvc.Controllers

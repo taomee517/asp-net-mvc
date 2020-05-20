@@ -7,25 +7,25 @@
 
 using grpc = global::Grpc.Core;
 
-namespace AspNetMvc.Grpc {
+namespace GrpcLib.Grpc {
   public static partial class CtrlService
   {
-    static readonly string __ServiceName = "asp_net_mvc.Grpc.CtrlService";
+    static readonly string __ServiceName = "GrpcLib.grpc.CtrlService";
 
-    static readonly grpc::Marshaller<global::AspNetMvc.Grpc.SettingRequest> __Marshaller_asp_net_mvc_Grpc_SettingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::AspNetMvc.Grpc.SettingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::AspNetMvc.Grpc.SettingResponse> __Marshaller_asp_net_mvc_Grpc_SettingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::AspNetMvc.Grpc.SettingResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcLib.Grpc.SettingRequest> __Marshaller_GrpcLib_grpc_SettingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcLib.Grpc.SettingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcLib.Grpc.SettingResponse> __Marshaller_GrpcLib_grpc_SettingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcLib.Grpc.SettingResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::AspNetMvc.Grpc.SettingRequest, global::AspNetMvc.Grpc.SettingResponse> __Method_SendSettingCmd = new grpc::Method<global::AspNetMvc.Grpc.SettingRequest, global::AspNetMvc.Grpc.SettingResponse>(
+    static readonly grpc::Method<global::GrpcLib.Grpc.SettingRequest, global::GrpcLib.Grpc.SettingResponse> __Method_SendSettingCmd = new grpc::Method<global::GrpcLib.Grpc.SettingRequest, global::GrpcLib.Grpc.SettingResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SendSettingCmd",
-        __Marshaller_asp_net_mvc_Grpc_SettingRequest,
-        __Marshaller_asp_net_mvc_Grpc_SettingResponse);
+        __Marshaller_GrpcLib_grpc_SettingRequest,
+        __Marshaller_GrpcLib_grpc_SettingResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::AspNetMvc.Grpc.ControlApiReflection.Descriptor.Services[0]; }
+      get { return global::GrpcLib.Grpc.ControlApiReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of CtrlService</summary>
@@ -38,7 +38,7 @@ namespace AspNetMvc.Grpc {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::AspNetMvc.Grpc.SettingResponse> SendSettingCmd(global::AspNetMvc.Grpc.SettingRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcLib.Grpc.SettingResponse> SendSettingCmd(global::GrpcLib.Grpc.SettingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -76,7 +76,7 @@ namespace AspNetMvc.Grpc {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::AspNetMvc.Grpc.SettingResponse SendSettingCmd(global::AspNetMvc.Grpc.SettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcLib.Grpc.SettingResponse SendSettingCmd(global::GrpcLib.Grpc.SettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendSettingCmd(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -86,7 +86,7 @@ namespace AspNetMvc.Grpc {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::AspNetMvc.Grpc.SettingResponse SendSettingCmd(global::AspNetMvc.Grpc.SettingRequest request, grpc::CallOptions options)
+      public virtual global::GrpcLib.Grpc.SettingResponse SendSettingCmd(global::GrpcLib.Grpc.SettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SendSettingCmd, null, options, request);
       }
@@ -98,7 +98,7 @@ namespace AspNetMvc.Grpc {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::AspNetMvc.Grpc.SettingResponse> SendSettingCmdAsync(global::AspNetMvc.Grpc.SettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcLib.Grpc.SettingResponse> SendSettingCmdAsync(global::GrpcLib.Grpc.SettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendSettingCmdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -108,7 +108,7 @@ namespace AspNetMvc.Grpc {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::AspNetMvc.Grpc.SettingResponse> SendSettingCmdAsync(global::AspNetMvc.Grpc.SettingRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcLib.Grpc.SettingResponse> SendSettingCmdAsync(global::GrpcLib.Grpc.SettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendSettingCmd, null, options, request);
       }
@@ -133,7 +133,7 @@ namespace AspNetMvc.Grpc {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CtrlServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_SendSettingCmd, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AspNetMvc.Grpc.SettingRequest, global::AspNetMvc.Grpc.SettingResponse>(serviceImpl.SendSettingCmd));
+      serviceBinder.AddMethod(__Method_SendSettingCmd, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLib.Grpc.SettingRequest, global::GrpcLib.Grpc.SettingResponse>(serviceImpl.SendSettingCmd));
     }
 
   }
