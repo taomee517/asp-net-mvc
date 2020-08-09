@@ -5,25 +5,32 @@ using System;
 using GrpcLib.beans;
 using GrpcLib.Grpc;
 using GrpcLib.utils;
+using log4net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace asp_net_mvc.Controllers
 {
+    
+    
     [Route("api")]
     [ApiController]
     public class IndexController : ControllerBase
     {
+        private readonly ILog logger = LogManager.GetLogger(Startup.LogRepository.Name, typeof(IndexController));  
+        
         [HttpGet("action")]
         public IActionResult Index()
         {
-            Console.WriteLine("进入Index");
+            // Console.WriteLine("进入Index");
+            logger.Info("进入Index");
             return Content("first asp.net msg");
         }
         
         [HttpGet("string")]
         public string Msg()
         {
-            Console.WriteLine("进入Msg");
+            // Console.WriteLine("进入Msg");
+            logger.Info("进入Msg");
             return "String msg";
         }
         
@@ -31,7 +38,8 @@ namespace asp_net_mvc.Controllers
         [HttpPost("setting")]
         public bool Setting(CmdModel model)
         {
-            Console.WriteLine("进入Setting方法!");
+            logger.Info("进入Setting方法");
+            // Console.WriteLine("进入Setting方法!");
             var mac = model.Mac;
             var clientBase = GrpcClientUtil.GetGrpcClient(mac);
             var client = clientBase as CtrlService.CtrlServiceClient;

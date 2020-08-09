@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using asp_net_mvc.Models;
+using log4net;
 
 namespace asp_net_mvc.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        // private readonly ILog _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
