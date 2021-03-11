@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using asp_net_mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using asp_net_mvc.Models;
-using log4net;
 
 namespace asp_net_mvc.Controllers
 {
@@ -26,6 +21,11 @@ namespace asp_net_mvc.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        
+        public IActionResult FileUpload()
         {
             return View();
         }

@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "File Upload";
+}
+<link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+
+<form id="uploadForm" class="text-left">
+    <div class="form-group ">
+        <label for="otaFileName">文件名称（请严格按照<span style="font-weight: bold; color: red">产品名称.硬件版本.软件名称.软件版本.bin</span>的格式命名）</label>
+        <input type="text" class="form-control" id="otaFileName" ref="file1_md5"/>
+    </div>
+    <div class="form-group">
+        <label for="inputFile">升级文件</label>
+        <input type="file" class="form-control-file" id="inputFile">
+    </div>
+    <div class="form-group">
+        <label for="file1Md5">MD5校验码</label>
+        <input type="text" class="form-control" id="file1Md5" placeholder="EO446521EOINNWSI368"/>
+    </div>
+
+    <div class="form-group">
+        <label for="sensorType">设备类型</label>
+        <select id="sensorType" class="form-control">
+            <option value="7000">监控量测</option>
+            <option value="23000">同禾RTU</option>
+            <option value="27000">航天振弦</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="mark">备注</label>
+        <textarea class="form-control" id="mark" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="upload()">Upload</button>
+</form>
+
+<h1 id="responseMsg"></h1>
+@section Scripts
+{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        function upload() {
+            const formData = new FormData($("#uploadForm")[0]);
+            // formData.append("File", $("#inputFile").files[0]);
+            // formData.append("OtaFileName", $("#otaFileName").val());
+            // formData.append("File1Md5", $("#file1Md5").val());
+            // formData.append("SensorType", $("#sensorType").val());
+            // formData.append("Mark", $("#mark").val());
+            $.ajax({
+               type: "POST",
+               url: "/ota/fileUpload",               
+               data: formData,
+               async: false,
+               contentType: false,
+               processData: false,
+               dataType: "json",
+               mimeType: "multipart/form-data",
+               success: function(data) {
+                    $("#responseMsg").html(data);
+               }
+          });
+        }
+    </script>
+}

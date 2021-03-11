@@ -1,35 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj": {}
+    "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj": {}
   },
   "projects": {
-    "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj": {
+    "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
+        "projectUniqueName": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
         "projectName": "asp-net-mvc",
-        "projectPath": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
-        "packagesPath": "C:\\Users\\htjc\\.nuget\\packages\\",
-        "outputPath": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\obj\\",
+        "projectPath": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\htjc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj": {
+                "projectPath": "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,6 +39,24 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            },
+            "log4net.Kafka.Core": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[3.0.0-alpha.143, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -49,7 +66,85 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\Administrator\\.dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj",
+        "projectName": "grpc-lib",
+        "projectPath": "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Grpc": {
+              "target": "Package",
+              "version": "[2.29.0, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.29.0, )"
+            },
+            "Grpc.Reflection": {
+              "target": "Package",
+              "version": "[2.29.0, )"
+            },
+            "Grpc.Tools": {
+              "target": "Package",
+              "version": "[2.29.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Users\\Administrator\\.dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

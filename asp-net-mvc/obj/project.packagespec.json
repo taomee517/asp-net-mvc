@@ -1,24 +1,24 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
+    "projectUniqueName": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
     "projectName": "asp-net-mvc",
-    "projectPath": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
-    "outputPath": "F:\\code\\c#\\priate\\asp-net-mvc\\asp-net-mvc\\obj\\",
+    "projectPath": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\asp-net-mvc.csproj",
+    "outputPath": "F:\\GitHub\\c#\\asp-net-mvc\\asp-net-mvc\\obj\\",
     "projectStyle": "PackageReference",
-    "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj": {
+            "projectPath": "F:\\GitHub\\c#\\asp-net-mvc\\grpc-lib\\grpc-lib.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -29,6 +29,24 @@
   },
   "frameworks": {
     "netcoreapp3.1": {
+      "dependencies": {
+        "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+          "target": "Package",
+          "version": "[3.1.0, )"
+        },
+        "log4net": {
+          "target": "Package",
+          "version": "[2.0.8, )"
+        },
+        "log4net.Kafka.Core": {
+          "target": "Package",
+          "version": "[1.1.1, )"
+        },
+        "protobuf-net": {
+          "target": "Package",
+          "version": "[3.0.0-alpha.143, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",
@@ -38,7 +56,16 @@
         "net48"
       ],
       "assetTargetFallback": true,
-      "warn": true
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Users\\Administrator\\.dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
     }
   }
 }
